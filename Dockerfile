@@ -101,7 +101,7 @@ RUN set -x \
    | wget --base=http://github.com/ -i - -O sd-cmd \
    && chmod +x sd-cmd \
    # Download store-cli
-   && wget -q -O - https://api.github.com/repos/screwdriver-cd/store-cli/releases/latest \
+   && wget -q -O - https://api.github.com/repos/GWT5091/store-cli-test \
    | egrep -o "/screwdriver-cd/store-cli/releases/download/v[0-9.]*/store-cli_${TARGETOS}_${TARGETARCH}" \
    | sed -e "s/\/screwdriver-cd\/\([a-zA-Z-]*\)\/releases\/download\/\(v[0-9.]*\)\/store-cli_${TARGETOS}_${TARGETARCH}/\1 \2/" >> tool-versions \
    && wget -q -O - https://api.github.com/repos/screwdriver-cd/store-cli/releases/latest \
